@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="PL-pl">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Panowie Programiści
+    </title>
+    <meta name="description" content="Project title">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Project title" />
+    <meta property="og:title" content="Project title" />
+    <meta property="og:description" content="Project title" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="page" class="site">
+        <div class="container-fluid">
+    <div class="row header-row">
+        <div class="col-md-3 col-lg-2">
+            <a href="https://panowie-programisci.pl/" target="_blank">
+                <img class="pp-logo u-top-layer" src="img/pplogo.png" alt="Panowie Programisci">
+            </a>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row top-row">
+        <div class="col-6 col-md-6 col-lg-5 offset-6 offset-md-1 offset-lg-1">
+            <img id="oval" class="top-row__oval-big u-back-layer on-page-load" src="../../img/oval-1.svg" alt="oval">
+        </div>
+        <div class="col-11 col-md-7 col-lg-5 offset-1 offset-md-5 offset-lg-1">
+            <img class="top-row__oval-small u-back-layer on-page-load" src="../../img/oval-2.svg" alt="oval">
+            <h1 class="top-row__header">
+                Zadanie<br>rekrutacyjne
+            </h1>
+            <div class="top-row__copy">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue dolor, varius et tortor elementum.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="container-fluid padding-right-none">
+    <div class="row form-row">
+        <div class="col-11 col-md-4 col-lg-3 offset-1 offset-lg-2">
+            <h1 class="form-header">
+                Zamów<br>bilety
+            </h1>
+            <div class="copy">
+                <p>
+                    Cena biletu: 20zł
+                </p>
+                <p>
+                    <strong>Podsumowanie: <span class="tickets-amount">XX</span> zł</strong>
+                </p>
+                <img class="cloud u-visible-sm on-page-load" src="img/cloud.svg" alt="cloud">
+            </div>
+        </div>
+        <div class="col-10 col-md-6 col-lg-6 offset-2 offset-md-1 offset-lg-1 padding-right-none">
+            <div class="form-container">
+                <img src="../../img/oval-3.svg" alt="oval" class="form-container__oval u-top-layer on-page-load">
+                <form id="contact-form" class="form-container__contact-form">
+                    <p class="alert alert-success">
+                        <strong>Udało się!</strong>
+                    </p>
+                    <input id="name" name="name" type="text" placeholder="Imię i nazwisko">
+                    <input id="number" name="number" type="text" placeholder="Liczba biletów">
+                    <input id="submit" name="submit" type="submit" value="Zamów">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script>
+    // $.fn.parallax = function(resistance, mouse) {
+    // var $el = $(this);
+    // TweenLite.to($el, 0.2, {
+    //     x: -((mouse.clientX - window.innerWidth / 2) / resistance),
+    //     y: -((mouse.clientY - window.innerHeight / 2) / resistance)
+    // });
+    // };
+
+    // $(document).mousemove(function(e) {
+    //     $("#oval").parallax(-30, e);
+    // });
+    </script>
+
+</body>
+</html>

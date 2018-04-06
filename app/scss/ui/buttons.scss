@@ -1,0 +1,44 @@
+//## Buttons
+@import "../_variables";
+@import "../_mixins";
+
+button,
+[class*="button-"] {
+    font-family: $font-light;
+    font-weight: 700;
+    font-size: $font-size-copy;
+    outline: none; 
+    background-color: $default;
+    padding: 0 $spacing;
+    appearance: none;
+    display: inline-block;
+    cursor: pointer;
+    @include flex-shrink(0);
+    // @include transition(
+    //     opacity .5s ease,
+    //     transform .5s ease,
+    //     background-color .3s ease,
+    //     border-color .3s ease,
+    //     color .3s ease
+    // )
+}
+
+button,
+[class*="button-"] {
+    // @include transition(all .3s ease);
+
+    &:hover {
+        .arrow--left {
+            transform: translateX(-10px) rotate(90deg);
+        }
+        .arrow--right {
+            transform: translateX(10px) rotate(-90deg);
+        }
+    }
+}
+
+.button-disabled {
+    opacity: 0.5;
+}
+
+

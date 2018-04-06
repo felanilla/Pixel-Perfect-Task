@@ -1,0 +1,61 @@
+//## Grid
+@import "../_variables";
+@import "../_mixins";
+
+//!! Custom bootstrap container
+.container {
+	width: 100%;
+	padding-left: $spacing;
+	padding-right: $spacing;	
+}
+
+.container-fluid {
+	padding-left: $spacing;
+	padding-right: $spacing;	
+}
+
+//!! Custom bootstrap row
+.row {
+	margin-left: -$spacing;
+	margin-right: -$spacing;
+	@include flexbox;
+	@include flex-direction(row);
+	@include justify-content(flex-start);
+
+	&--fallback {
+		display: block;
+	}
+
+	@include breakpoint(xs) {
+		margin-left: -$spacing-m;
+		margin-right: -$spacing-m;
+		@include flex-wrap(wrap);
+	}
+}
+
+//!! Custom bootstrap column
+[class*='col-'] {
+	float: left;
+	padding-left: $spacing;
+	padding-right: $spacing;
+
+	@include breakpoint(xs) {
+		padding-left: $spacing-m;
+		padding-right: $spacing-m;
+	}	
+}
+
+//!! Grid with small spacings (mobile)
+.row {
+
+	&.rowMobile {
+		margin-left: -$spacing-m;
+		margin-right: -$spacing-m;
+
+		[class*='col-'] {
+			float: left;
+			padding-left: $spacing-m;
+			padding-right: $spacing-m;	
+		}		
+	}
+}

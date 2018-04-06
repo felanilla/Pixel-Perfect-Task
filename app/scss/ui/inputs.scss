@@ -1,0 +1,72 @@
+//## Inputs
+@import "_variables";
+@import "_mixins";
+
+input {
+    border: solid 1px #979797;
+    width: 230px;
+    height: 33px;
+    line-height: 1.57;
+    letter-spacing: 2.1px;
+    font-size: 14px;
+    padding-left: 27px;
+    outline: none;
+    background: transparent;
+    margin: 6px 0;
+
+    @include breakpoint(md) {
+        width: 183px;
+        padding-left: 10px;
+    }
+
+    @include breakpoint(xs) {
+        width: 247px;
+    }
+
+    @include breakpoint(xxs) {
+        width: 191px;
+        padding-left: 12px;
+    }
+
+    
+}
+
+input[type="submit"] {
+    width: 115px;
+    font-weight: 700;
+    border: none;
+    color: #fff;
+    text-align: left;
+    padding-left: 15px;
+    background: #0bc0ce url("../../img/cards.svg") no-repeat center;
+    background-position: 84px center;
+    background-size: 21px 19px;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease; 
+    -o-transition: all 0.8s ease;
+
+    &:hover {
+        background: #007DA7 url("../../img/cards.svg") no-repeat center;
+        background-position: 84px center;
+        background-size: 21px 19px;
+
+        @include breakpoint(md) {
+            background-position: 82px center;
+        }
+
+        @include breakpoint(xs) {
+            background-position: 90px center;
+        }
+    }
+
+    @include breakpoint(md) {
+        width: 115px;
+        background-position: 82px center;
+    }
+
+    @include breakpoint(xs) {
+        width: 127px;
+        background-position: 90px center;
+    }
+}

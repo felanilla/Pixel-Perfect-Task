@@ -1,0 +1,27 @@
+//## Grid
+@import "../_variables";
+@import "../_mixins";
+
+.header-row {
+
+	margin-top: 30px;
+
+	.pp-logo {
+		margin-left: 38px;
+		max-width: 178px;
+		position: relative;
+
+		@include breakpoint(md) {
+			max-width: 148px;
+			margin-left: 42px;
+		}
+
+		@include breakpoint(xs) {
+			margin-left: 0;
+		}
+	}
+
+	@include breakpoint(sm) {
+		margin-top: 13px;
+	}
+}

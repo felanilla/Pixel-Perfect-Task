@@ -1,0 +1,51 @@
+//## Defaults
+@import "_variables";
+@import "_mixins";
+
+html,
+body {
+    background-color: $default;
+    font-family: $font-light;
+    font-size: $font-size-base;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+//** Basic animation
+
+.fade-in,
+.fade-in-up {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+//** SVG loader
+
+.logo-loader {
+    position: absolute;
+    width: $offset;
+    height: $offset;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 1s;
+}

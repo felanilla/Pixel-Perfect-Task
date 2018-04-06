@@ -1,0 +1,103 @@
+//## Grid
+@import "../_variables";
+@import "../_mixins";
+
+.top-row {
+
+	padding-right: 0;
+
+	&__oval-big {
+		width: 391px;
+		top: -57px;
+		position: absolute;
+
+		@include breakpoint(xl) {
+			right: 0;
+		}
+
+		@include breakpoint(md) {
+			top: -49px;
+		}
+
+		@include breakpoint(sm) {
+			right: 0;
+			min-width: 164px;
+			top: -35px;
+		}
+	}
+
+	&__oval-small {
+		position: absolute;
+		width: 244px;
+		left: -159px;
+		top: 91px;
+
+		@include breakpoint(md) {
+			top: -80px;
+			left: 5px;
+		}
+
+		@include breakpoint(sm) {
+			display: none;
+		}
+	}
+
+	&__header {
+		margin-top: 82px;
+		margin-bottom: 25px;
+		position: relative;
+
+		@include breakpoint(md) {
+			margin-top: 82px;
+		}
+
+		@include breakpoint(sm) {
+			margin-top: 42px;
+			margin-bottom: 13px;
+		}
+	}
+
+	&__copy {
+		max-width: 391px;
+
+		p {
+			position: relative;
+			cursor: pointer;
+
+			&:after {
+				content: ' ';
+				display: block;
+				width: 60px;
+				height: 8px;
+				background: url("../../img/arrow-right.svg") no-repeat center;
+				position: absolute;
+				bottom: 4px;
+				left: 166px;
+				transition: all 0.8s ease;
+				-webkit-transition: all 0.8s ease;
+				-moz-transition: all 0.8s ease; 
+				-o-transition: all 0.8s ease;
+
+				@include breakpoint(md) {
+					left: 157px;
+				}
+
+				@include breakpoint(sm) {
+					left: 90px;
+					bottom: 2px;
+				}
+			}
+
+			&:hover:after {
+				transform: translateX(8px);
+				-webkit-transform: translateX(8px);
+				-o-transform: translateX(8px);
+				-moz-transform: translatex(8px);
+			}
+		}
+
+		@include breakpoint(sm) {
+			max-width: 257px;
+		}
+	}
+}

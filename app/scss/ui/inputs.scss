@@ -26,9 +26,15 @@ input {
     @include breakpoint(xxs) {
         width: 191px;
         padding-left: 12px;
-    }
+    } 
 
-    
+    &::-webkit-input-placeholder {
+        transition: color .25s ease;
+    }
+      
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
 }
 
 input[type="submit"] {

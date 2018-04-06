@@ -6,7 +6,7 @@
 
 	margin-top: 30px;
 
-	.pp-logo {
+	&__pp-logo {
 		margin-left: 38px;
 		max-width: 178px;
 		position: relative;
@@ -18,6 +18,23 @@
 
 		@include breakpoint(xs) {
 			margin-left: 0;
+		}
+	}
+
+	&__line {
+		width: 98px;
+  		height: 2px;
+		background: #979797;
+		position: absolute;
+		right: 38px;
+		
+		@include breakpoint(md) {
+			right: 48px;
+		}
+		  
+		@include breakpoint(xs) {
+			width: 44px;
+			right: 5px;
 		}
 	}
 

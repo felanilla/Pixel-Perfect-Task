@@ -44,7 +44,7 @@ input[type="submit"] {
     color: #fff;
     text-align: left;
     padding-left: 15px;
-    background: #0bc0ce url("dist/img/cards.svg") no-repeat center;
+    background: #0bc0ce url("../../img/cards.svg") no-repeat center;
     background-position: 84px center;
     background-size: 21px 19px;
     transition: all 0.8s ease;
@@ -53,7 +53,7 @@ input[type="submit"] {
     -o-transition: all 0.8s ease;
 
     &:hover {
-        background: #007DA7 url("dist/img/cards.svg") no-repeat center;
+        background: #007DA7 url("../../img/cards.svg") no-repeat center;
         background-position: 84px center;
         background-size: 21px 19px;
 

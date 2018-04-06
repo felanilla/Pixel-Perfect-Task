@@ -10,10 +10,7 @@
 		width: 391px;
 		top: -57px;
 		position: absolute;
-
-		@include breakpoint(xl) {
-			right: 0;
-		}
+		right: 0;
 
 		@include breakpoint(md) {
 			top: -49px;

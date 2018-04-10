@@ -19,7 +19,7 @@ body {
     margin-top: 29px;
     max-width: 980px;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
         margin-top: 13px;
     }
 }

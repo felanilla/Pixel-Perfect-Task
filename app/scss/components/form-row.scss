@@ -9,17 +9,21 @@
 		margin-bottom: 40px;
 
 		@include breakpoint(md) {
-			margin-top: 192px;
+			margin-top: 176px;
 		}
 
 		@include breakpoint(sm) {
-			margin-bottom: 17px;
-			margin-top: 0;
+			margin-bottom: 15px;
+			margin-top: 32px;
 		}
 	}
 
 	.copy > p {
 		margin-bottom: 2px;
+
+		@include breakpoint(sm) {
+			margin-bottom: 4px;
+		}
 	}
 
 	.form-container {
@@ -42,13 +46,8 @@
 			max-width: 107px;
 
 			@include breakpoint(md) {
-				right: 45px;
-				top: -68px;
-			}
-
-			@include breakpoint(md) {
-				right: 46px;
-				top: -68px;
+				top: -70px;
+    			right: 9px;
 			}
 
 			@include breakpoint(sm) {
@@ -63,25 +62,23 @@
 		}
 
 		@include breakpoint(md) {
-			margin-top: 239px;
+			margin-top: 225px;
 			padding-left: 64px;
 			height: 238px;
+			width: 100%;
 		}
 
 		@include breakpoint(sm) {
-			margin: 20px 0;
+			margin: 24px 0;
 			padding-left: 28px;
 			padding-right: 32px;
 			height: 207px;
+			min-width: 260px;
 		}
 	}
 	
 	.cloud {
 		margin-top: 77px;
-	}
-
-	@include breakpoint(sm) {
-		margin-top: 48px;
 	}
 }
 

@@ -5,10 +5,21 @@
 .top-row {
 
 	&__oval-big {
-		width: 100%;
+		width: 391px;
 		position: absolute;
 		top: -53px;
 		left: 0;
+
+		@include breakpoint(md) {
+			left: 45px;
+   			top: -55px;
+		}
+
+		@include breakpoint(sm) {
+			left: 41px;
+			top: -45px;
+			width: 164px;
+		}
 	}
 
 	&__oval-small {
@@ -17,23 +28,29 @@
     	left: -162px;
     	top: 95px;
 
+		@include breakpoint(md) {
+			left: -8px;
+			top: -79px;
+		}
+
 		@include breakpoint(sm) {
 			display: none;
 		}
 	}
 
 	&__header {
-		margin-top: 82px;
+		margin-top: 26px;
 		margin-bottom: 30px;
 		position: relative;
 
 		@include breakpoint(md) {
-			margin-top: 82px;
+			margin-top: 76px;
+			margin-bottom: 11px;
 		}
 
 		@include breakpoint(sm) {
-			margin-top: 42px;
-			margin-bottom: 13px;
+			margin-top: 26px;
+			margin-bottom: 12px;
 		}
 	}
 

@@ -8,11 +8,15 @@
 	.pp-logo {
 		position: absolute;
 		left: 0;
-		max-width: 178px;
-		max-height: 76px;
+		width: 160px;
 
 		@include breakpoint(md) {
-			max-width: 148px;
+			left: 2px;
+		}
+
+		@include breakpoint(sm) {
+			max-width: 138px;
+			left: 0;
 		}
 	}
 
@@ -22,6 +26,10 @@
 		background: #979797;
 		position: absolute;
 		right: 0;
+
+		@include breakpoint(sm) {
+			width: 44px;
+		}
 	}
 
 }

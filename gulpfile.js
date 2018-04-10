@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const gulpImports = require('gulp-imports');
 const gutil = require('gulp-util');
-const eslint = require('gulp-eslint');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 const gulpLoadPlugins = require('gulp-load-plugins');
@@ -113,19 +112,7 @@ gulp.task('html', function() {
         .pipe(gulp.dest(paths.dist.dir));
 });
 
-gulp.task('lint', function() {
-    return gulp.src(['app/scripts/*','!node_modules/**'])
-    .pipe(eslint({
-        'rules':{
-            'quotes': [1, 'single'],
-            'semi': [1, 'always']
-        }
-    }))
-    .pipe(eslint.format())
-    .pipe(eslint.failOnError());
-});
-
-gulp.task(build, ['scripts', 'lint', 'styles', 'images', 'fileinclude'], function() {
+gulp.task(build, ['scripts', 'styles', 'images', 'fileinclude'], function() {
     browserSync({
         notify: false,
         port: 9000,

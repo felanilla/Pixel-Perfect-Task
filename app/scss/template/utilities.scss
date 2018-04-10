@@ -14,8 +14,8 @@
 //** Layering
 .u-top-layer { z-index: 2; }
 .u-back-layer { z-index: 0; }
-.padding-left-none { padding-left: 0 !important; }
-.padding-right-none { padding-right: 0 !important; }
+.u-padding-left-none { padding-left: 0 !important; }
+.u-padding-right-none { padding-right: 0 !important; }
 
 //** Responsive classes
 @include breakpoint(sm) {

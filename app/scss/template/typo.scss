@@ -7,7 +7,7 @@
 h1 { 
   font-size: $h1; 
   font-family: $font-bold;
-  line-height: 1.04;
+  line-height: 50px;
   font-weight: 700;
   letter-spacing: 5.1px;
   
@@ -22,7 +22,7 @@ p {
   font-size: $font-size-copy;
   font-family: $font-light;
   font-weight: 300;
-  line-height: 1.57;
+  line-height: 22px;
   letter-spacing: 2.1px;
   
   @include breakpoint(sm) {

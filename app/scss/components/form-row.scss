@@ -5,8 +5,8 @@
 .form-row {
 
 	.form-header {
-		margin-top: 192px;
-		margin-bottom: 35px;
+		margin-top: 179px;
+		margin-bottom: 40px;
 
 		@include breakpoint(md) {
 			margin-top: 192px;
@@ -19,14 +19,15 @@
 	}
 
 	.copy > p {
-		margin-bottom: 5px;
+		margin-bottom: 2px;
 	}
 
 	.form-container {
+		outline: none;
 		position: relative;
-		margin: 215px 0;
+		margin: 202px 0;
 		padding-left: 80px;
-		width: 100%;
+		width: 507px;
 		height: 263px;
 		background: #ececec;
 		@include flexbox;
@@ -36,8 +37,8 @@
 
 		&__oval {
 			position: absolute;
-			right: 37px;
-			top: -44px;
+			right: 38px;
+			top: -44px;		
 			max-width: 107px;
 
 			@include breakpoint(md) {
@@ -77,10 +78,6 @@
 	
 	.cloud {
 		margin-top: 77px;
-
-		@include breakpoint(sm) {
-			margin-top: 76px;
-		}
 	}
 
 	@include breakpoint(sm) {

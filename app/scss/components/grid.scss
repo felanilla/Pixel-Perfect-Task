@@ -2,22 +2,25 @@
 @import "../_variables";
 @import "../_mixins";
 
-//!! Custom bootstrap container
-.container {
-	width: 100%;
-	padding-left: $spacing;
-	padding-right: $spacing;	
+//Custom bootstrap container
+// 940px + @grid-gutter-width
+
+@media (min-width: 992px) {
+
+	.container {
+		width:940px;
+	}
+}
+@media (min-width: 1200px) {
+
+	.container {
+		width:940px;
+	}
 }
 
-.container-fluid {
-	padding-left: $spacing;
-	padding-right: $spacing;	
-}
 
-//!! Custom bootstrap row
+//Custom bootstrap row
 .row {
-	margin-left: -$spacing;
-	margin-right: -$spacing;
 	@include flexbox;
 	@include flex-direction(row);
 	@include justify-content(flex-start);
@@ -33,11 +36,17 @@
 	}
 }
 
-//!! Custom bootstrap column
+//Custom bootstrap column
 [class*='col-'] {
 	float: left;
-	padding-left: $spacing;
+	padding-left: 0;
 	padding-right: $spacing;
+
+	@include breakpoint(md) {
+		padding-left: $spacing;
+		padding-right: $spacing;
+	}
+	
 
 	@include breakpoint(xs) {
 		padding-left: $spacing-m;

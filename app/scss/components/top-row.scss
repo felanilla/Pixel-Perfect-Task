@@ -4,35 +4,18 @@
 
 .top-row {
 
-	padding-right: 0;
-
 	&__oval-big {
-		width: 391px;
-		top: -57px;
+		width: 100%;
 		position: absolute;
-		right: 0;
-
-		@include breakpoint(md) {
-			top: -49px;
-		}
-
-		@include breakpoint(sm) {
-			right: 0;
-			min-width: 164px;
-			top: -35px;
-		}
+		top: -53px;
+		left: 0;
 	}
 
 	&__oval-small {
 		position: absolute;
-		width: 244px;
-		left: -159px;
-		top: 91px;
-
-		@include breakpoint(md) {
-			top: -80px;
-			left: 5px;
-		}
+		max-width: 244px;
+    	left: -162px;
+    	top: 95px;
 
 		@include breakpoint(sm) {
 			display: none;
@@ -41,7 +24,7 @@
 
 	&__header {
 		margin-top: 82px;
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 		position: relative;
 
 		@include breakpoint(md) {
@@ -56,6 +39,7 @@
 
 	&__copy {
 		max-width: 391px;
+		height: 76px;
 
 		p {
 			position: relative;
@@ -68,8 +52,8 @@
 				height: 8px;
 				background: url("../img/arrow-right.svg") no-repeat center;
 				position: absolute;
-				bottom: 4px;
-				left: 166px;
+				bottom: 6px;
+				left: 165px;
 				transition: all 0.8s ease;
 				-webkit-transition: all 0.8s ease;
 				-moz-transition: all 0.8s ease; 

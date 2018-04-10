@@ -21,7 +21,6 @@ var ANIMATION = {
               y: (relY - $this.height() / 2) / $this.height() * movement
             });
           }
-
     },
 
     scrollMagic: {

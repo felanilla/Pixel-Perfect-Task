@@ -19,39 +19,43 @@
 
 <body>
 
-    <div id="page" class="site">
-        <div class="container-fluid">
+    <div id="page">
+        <div class="container">
     <div class="row header-row">
-        <div class="col-md-3 col-lg-2">
+        <div class="col-3">
             <a href="https://panowie-programisci.pl/" target="_blank">
                 <img class="pp-logo u-top-layer" src="img/pplogo.png" alt="Panowie Programisci">
             </a>
         </div>
-        <div class="line"></div>
+        <div class="col-3 col-lg-2 offset-6 offset-lg-7">
+            <div class="line"></div>
+        </div>
     </div>
 </div>
 
         <div class="container">
     <div class="row top-row">
-        <div class="col-6 col-md-6 col-lg-5 offset-6 offset-md-1 offset-lg-1">
+        <div class="col-6 col-md-4 col-lg-5 offset-6 offset-md-1 offset-lg-1">
             <img id="oval" class="top-row__oval-big u-back-layer on-page-load" src="../../img/oval-1.svg" alt="oval">
         </div>
-        <div class="col-11 col-md-7 col-lg-5 offset-1 offset-md-5 offset-lg-1">
+        <div class="col-11 col-md-6 col-lg-5 offset-1 offset-md-0 offset-lg-1">
             <img class="top-row__oval-small u-back-layer on-page-load" src="../../img/oval-2.svg" alt="oval">
             <h1 class="top-row__header">
                 Zadanie<br>rekrutacyjne
             </h1>
-            <div class="top-row__copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue dolor, varius et tortor elementum.
-                </p>
-            </div>
+            <a href="#form-container">
+                <div class="top-row__copy">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue dolor, varius et tortor elementum.
+                    </p>
+                </div>
+             </a>
         </div>
     </div>
 </div>
-        <div class="container-fluid padding-right-none">
+        <div class="container">
     <div class="row form-row">
-        <div class="col-11 col-md-4 col-lg-3 offset-1 offset-lg-2">
+        <div class="col-11 col-md-4 col-lg-3 offset-1 offset-lg-1">
             <h1 class="form-header">
                 Zamów<br>bilety
             </h1>
@@ -65,8 +69,8 @@
                 <img class="cloud u-visible-sm on-page-load" src="img/cloud.svg" alt="cloud">
             </div>
         </div>
-        <div class="col-10 col-md-6 col-lg-6 offset-2 offset-md-1 offset-lg-1 padding-right-none">
-            <div class="form-container">
+        <div class="col-10 col-md-6 col-lg-6 offset-2 offset-md-1 offset-lg-2">
+            <div id="form-container" class="form-container">
                 <img src="../../img/oval-3.svg" alt="oval" class="form-container__oval u-top-layer on-page-load">
                 <form id="contact-form" class="form-container__contact-form">
                     <p class="alert alert-success">

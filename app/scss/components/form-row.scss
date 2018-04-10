@@ -8,12 +8,8 @@
 		margin-top: 179px;
 		margin-bottom: 40px;
 
-		@include breakpoint(md) {
-			margin-top: 176px;
-		}
-
 		@include breakpoint(sm) {
-			margin-bottom: 15px;
+			margin-bottom: 17px;
 			margin-top: 32px;
 		}
 	}
@@ -47,7 +43,7 @@
 
 			@include breakpoint(md) {
 				top: -70px;
-    			right: 9px;
+    			right: 10px;
 			}
 
 			@include breakpoint(sm) {
@@ -62,16 +58,15 @@
 		}
 
 		@include breakpoint(md) {
-			margin-top: 225px;
+			margin-top: 226px;
 			padding-left: 64px;
 			height: 238px;
 			width: 100%;
 		}
 
 		@include breakpoint(sm) {
-			margin: 24px 0;
+			margin: 25px 0;
 			padding-left: 28px;
-			padding-right: 32px;
 			height: 207px;
 			width: 100%;
 		}

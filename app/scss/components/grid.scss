@@ -6,20 +6,31 @@
 //@container-max-width + @grid-gutter-width
 
 @media (min-width: 992px) {
+
 	.container {
 		width:940px;
 	}
 }
 
 @media (min-width: 1200px) {
+
 	.container {
 		width: 940px;
 	}
 }
 
 @media (min-width: 768px){
+
 	.container{
 		min-width: 768px;
+	}  
+}
+
+@media (max-width: 767px){
+
+	.container{
+		padding-left: ($spacing / 2 );
+		padding-right: ($spacing / 2 );
 	}  
 }
 
@@ -45,8 +56,6 @@
 	float: left;
 	padding-left: 0;
 	padding-right: $spacing;
-	// border-left: 1px solid red;
-	// border-right: 1px solid red;
 
 	@include breakpoint(md) {
 		padding-left: 0;
@@ -59,7 +68,7 @@
 	}	
 }
 
-//!! Grid with small spacings (mobile)
+//Grid with small spacings (mobile)
 .row {
 
 	&.rowMobile {

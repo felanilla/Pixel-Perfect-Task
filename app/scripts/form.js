@@ -56,10 +56,7 @@ var FORM = {
 					document.getElementById('alert-success').setAttribute("class", "show");
 				}, 
 				1000);
-			} else {
-				console.log("nie udało się:(")
-			}
-
+			} 
 		});
 
 		//Scroll to

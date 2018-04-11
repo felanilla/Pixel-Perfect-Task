@@ -5,7 +5,7 @@
 .header-row {
 	height: 76px;
 
-	.pp-logo {
+	&__pp-logo {
 		position: absolute;
 		left: 5px;
 		width: 162px;
@@ -20,7 +20,7 @@
 		}
 	}
 
-	.line {
+	&__line {
 		width: 98px;
   		height: 2px;
 		background: #979797;
@@ -31,5 +31,4 @@
 			width: 44px;
 		}
 	}
-
 }

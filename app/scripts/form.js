@@ -9,10 +9,10 @@ var FORM = {
 			  inputNumber =  document.getElementById('number');
 
 		inputNumber.addEventListener('keyup', function(e) {
-			let ticketAmount = document.getElementById('tickets-amount');
-			if(!isNaN(inputNumber.value)) {
-				ticketAmount.innerHTML = inputNumber.value * 20					
-			}
+		let ticketAmount = document.getElementById('tickets-amount');
+		if(!isNaN(inputNumber.value)) {
+			ticketAmount.innerHTML = inputNumber.value * 20					
+		}
 		})
 
 		submitBtn.addEventListener('click', function(e) {
@@ -60,7 +60,7 @@ var FORM = {
 			} 
 		});
 
-		//Scroll to
+		//Scroll to form
 
 		function anchorLinkHandler(e) {
 			const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);

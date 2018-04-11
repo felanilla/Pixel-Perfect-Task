@@ -84,9 +84,22 @@
 		}
 		
 		&__contact-form {
+			max-width: 230px;
 			@include flexbox;
 			@include flex-direction(column);
 			@include align-items(flex-end);
+
+			@include breakpoint(md) {
+				max-width: 183px;
+			}
+
+			@include breakpoint(xs) {
+				max-width: 247px;
+			}
+
+			@include breakpoint(xxs) {
+				max-width: 191px;
+			}
 
 			#alert-success {
 				font-size: 18px;

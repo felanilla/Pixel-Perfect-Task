@@ -58,6 +58,14 @@
 			right: 38px;
 			top: -44px;		
 			max-width: 107px;
+			-webkit-transition-duration: 1s;
+			-moz-transition-duration: 1s;
+			-o-transition-duration: 1s;
+			transition-duration: 1s;
+			-webkit-transition-property: -webkit-transform;
+			-moz-transition-property: -moz-transform;
+			-o-transition-property: -o-transform;
+			transition-property: transform;
 
 			@include breakpoint(md) {
 				top: -70px;
@@ -95,5 +103,11 @@
 
 .error {
 	display: none;
+}
+
+#oval-form.active {
+	transform: rotate(-160deg) !important;
+	-webkit-transform: rotate(-160deg);
+    -ms-transform: rotate(-160deg);
 }
   

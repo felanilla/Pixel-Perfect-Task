@@ -51,6 +51,7 @@ var FORM = {
 				for (var i = 0; i < formInputs.length; ++i) {
 					formInputs[i].style.display = "none";
 				}
+				document.getElementById('oval-form').classList.toggle("active");
 				
 				setTimeout(function(){ 
 					document.getElementById('alert-success').setAttribute("class", "show");

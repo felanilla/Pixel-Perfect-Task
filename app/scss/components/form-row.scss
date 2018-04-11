@@ -22,6 +22,10 @@
 		}
 	}
 
+	#tickets-amount {
+		font-weight: 700;
+	}
+
 	.form-container {
 		outline: none;
 		position: relative;
@@ -34,6 +38,20 @@
 		@include justify-content(center);
 		@include flex-direction(column);
 		@include align-items(flex-start);
+
+		@include breakpoint(md) {
+			margin-top: 226px;
+			padding-left: 64px;
+			height: 238px;
+			width: 100%;
+		}
+
+		@include breakpoint(sm) {
+			margin: 25px 0;
+			padding-left: 28px;
+			height: 207px;
+			width: 100%;
+		}
 
 		&__oval {
 			position: absolute;
@@ -56,20 +74,6 @@
 			@include flex-direction(column);
 			@include align-items(flex-end);
 		}
-
-		@include breakpoint(md) {
-			margin-top: 226px;
-			padding-left: 64px;
-			height: 238px;
-			width: 100%;
-		}
-
-		@include breakpoint(sm) {
-			margin: 25px 0;
-			padding-left: 28px;
-			height: 207px;
-			width: 100%;
-		}
 	}
 	
 	.cloud {
@@ -77,8 +81,19 @@
 	}
 }
 
-.alert {
-	display: none;
+#alert-success {
 	font-size: 18px;
+	opacity: 0;
+	height: 0;
+	-webkit-transition:opacity 700ms ease;
+}
+
+#alert-success.show {
+	opacity: 1;
+	height: auto;
+}
+
+.error {
+	display: none;
 }
   

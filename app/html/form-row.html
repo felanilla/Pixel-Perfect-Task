@@ -9,21 +9,24 @@
                     Cena biletu: 20zł
                 </p>
                 <p>
-                    <strong>Podsumowanie: <span class="tickets-amount">XX</span> zł</strong>
+                    <strong>Podsumowanie: <span id="tickets-amount">XX</span> zł</strong>
                 </p>
                 <img class="cloud u-visible-sm on-page-load" src="img/cloud.svg" alt="cloud">
             </div>
         </div>
         <div class="col-10 col-md-6 col-lg-6 offset-2 offset-md-1 offset-lg-2 ">
             <div id="form-container" class="form-container">
+                
                 <img src="../../img/oval-3.svg" alt="oval" class="form-container__oval u-top-layer on-page-load">
                 <form id="contact-form" class="form-container__contact-form">
-                    <p class="alert alert-success">
-                        <strong>Udało się!</strong>
-                    </p>
                     <input id="name" name="name" type="text" placeholder="Imię i nazwisko">
+                    <span class="error" id="error-name">Przedstaw się</span>
                     <input id="number" name="number" type="text" placeholder="Liczba biletów">
+                    <span class="error" id="error-number">Podaj liczbę</span>
                     <input id="submit" name="submit" type="submit" value="Zamów">
+                    <p id="alert-success">
+                        <strong>Dziękujemy za zamówienia.</strong>
+                    </p>
                 </form>
             </div>
         </div>

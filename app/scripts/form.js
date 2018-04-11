@@ -2,37 +2,67 @@ var FORM = {
     
     init: function() {
 
-			var $form = $("#contact-form"),
-				$successMsg = $(".alert"),
-				$input = $("input");
-			$.validator.addMethod("letters", function(value, element) {
-			return this.optional(element) || value == value.match(/^[a-zA-Z\s]*$/);
-			});
-			$form.validate({
-			rules: {
-				name: {
-				required: true,
-				minlength: 3,
-				letters: true
-				},
-				number: {
-				required: true,
-				number: true
-				}
-			},
-			messages: {
-				name: "Przedstaw się.",
-				number: "Wpisz liczbę."
-			},
-			submitHandler: function() {
-				$input.fadeOut();
-				var ticketsAmount = document.getElementById("number").value;
-				document.getElementsByClassName("tickets-amount")[0].innerHTML = ticketsAmount * 20;
-				setTimeout(function(){
-					$successMsg.fadeIn();
-				}, 1000);
+		//Form validation
+
+		const submitBtn = document.getElementById('submit'),
+			  inputName = document.getElementById('name'),
+			  inputNumber =  document.getElementById('number');
+
+		inputNumber.addEventListener('keyup', function(e) {
+			let ticketAmount = document.getElementById('tickets-amount');
+			if(!isNaN(inputNumber.value)) {
+				ticketAmount.innerHTML = inputNumber.value * 20					
 			}
+		})
+
+		submitBtn.addEventListener('click', function(e) {
+			e.preventDefault();
+			let inputNameVal = document.getElementById('name').value,
+				inputNumberVal =  document.getElementById('number').value,
+				errName = document.getElementById('error-name'),
+				errNumber = document.getElementById('error-number'),
+				nameCanSubmit = false,
+				numberCanSubmit = false;
+
+			function checkName() {
+				if (inputNameVal == "" || !isNaN(inputNameVal) || !inputNameVal.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+					errName.style.display = "block";
+					nameCanSubmit = false;
+				} else {
+					errName.style.display = "none";
+					nameCanSubmit = true;
+				}
+			}
+			checkName()
+	
+			function checkNumber() {
+				if (inputNumberVal == "" || !inputNumberVal.match(/[0-9]/)) {
+					errNumber.style.display = "block";
+					numberCanSubmit = false;
+				} else {
+					errNumber.style.display = "none";
+					numberCanSubmit = true;
+				} 
+			}
+			checkNumber()
+
+			if (nameCanSubmit && numberCanSubmit) {
+				let formInputs = document.querySelectorAll('input');
+				for (var i = 0; i < formInputs.length; ++i) {
+					formInputs[i].style.display = "none";
+				}
+				
+				setTimeout(function(){ 
+					document.getElementById('alert-success').setAttribute("class", "show");
+				}, 
+				1000);
+			} else {
+				console.log("nie udało się:(")
+			}
+
 		});
+
+		//Scroll to
 
 		function anchorLinkHandler(e) {
 			const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);

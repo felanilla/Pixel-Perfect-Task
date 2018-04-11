@@ -7,7 +7,7 @@
 
 	.pp-logo {
 		position: absolute;
-		left: 0;
+		left: 5px;
 		width: 162px;
 
 		@include breakpoint(md) {

@@ -4,23 +4,16 @@ var onPageLoad = utilities.getClasses('on-page-load');
 
 var ANIMATION = {
 
-    parallaxMove: function() {
+    rotateMove: function() {
 
-        $("#oval").mousemove(function(e) {
-            parallaxIt(e, ".slide", -100);
-            parallaxIt(e, "img", -30);
-          });
-          
-          function parallaxIt(e, target, movement) {
-            var $this = $("#oval");
-            var relX = e.pageX - $this.offset().left;
-            var relY = e.pageY - $this.offset().top;
-          
-            TweenMax.to(target, 1, {
-              x: (relX - $this.width() / 2) / $this.width() * movement,
-              y: (relY - $this.height() / 2) / $this.height() * movement
-            });
-          }
+        document.getElementById("oval").addEventListener('mouseover', btnHandler, false);
+        var rotation = 0;
+        var tween;
+        function btnHandler(e){
+            if (tween && tween.isActive()) return;
+            tween = TweenMax.to("#oval", 4, {rotation: rotation-=360});
+        }
+
     },
 
     scrollMagic: {
@@ -30,7 +23,7 @@ var ANIMATION = {
         init: function() {
 
             onPageLoad.forEach( function(item, index) {
-                var  onPageLoad = new ScrollMagic.Scene({
+                var onPageLoad = new ScrollMagic.Scene({
                     triggerElement: '.' + item,
                     triggerHook: 1
                 });
@@ -50,6 +43,7 @@ var ANIMATION = {
 
     init: function() {
         ANIMATION.scrollMagic.init();
+        ANIMATION.rotateMove();
     },
 };
 

@@ -100,18 +100,6 @@
 			@include breakpoint(xxs) {
 				max-width: 191px;
 			}
-
-			#alert-success {
-				font-size: 18px;
-				opacity: 0;
-				height: 0;
-				-webkit-transition:opacity 700ms ease;
-			}
-			
-			#alert-success.show {
-				opacity: 1;
-				height: auto;
-			}
 			
 			.error {
 				display: none;
@@ -121,6 +109,18 @@
 	
 	.cloud {
 		margin-top: 77px;
+	}
+
+	#alert-success {
+		font-size: 18px;
+		opacity: 0;
+		height: 0;
+		-webkit-transition:opacity 700ms ease;
+	}
+	
+	#alert-success.show {
+		opacity: 1;
+		height: auto;
 	}
 }
 

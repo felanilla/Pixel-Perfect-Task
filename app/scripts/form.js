@@ -47,12 +47,8 @@ var FORM = {
 			checkNumber()
 
 			if (nameCanSubmit && numberCanSubmit) {
-				let formInputs = document.querySelectorAll('input');
-				for (var i = 0; i < formInputs.length; ++i) {
-					formInputs[i].style.display = "none";
-				}
+				document.getElementById('contact-form').style.display = "none";
 				document.getElementById('oval-form').classList.toggle("active");
-				
 				setTimeout(function(){ 
 					document.getElementById('alert-success').setAttribute("class", "show");
 				}, 

@@ -1,5 +1,5 @@
 # README #
-Panowie Programiści
+Pixel Perfect Task
 
 # Setup
 npm i

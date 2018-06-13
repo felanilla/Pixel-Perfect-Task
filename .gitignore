@@ -8,3 +8,6 @@ node_modules/*
 *.mp4
 npm-debug.log
 ~/.atom
+.vscode/*
+!.vscode/settings.json
+.DS_Store
